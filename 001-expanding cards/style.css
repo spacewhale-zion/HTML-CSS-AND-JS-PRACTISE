@@ -1,0 +1,40 @@
+.container {
+  margin: 0px 5px auto 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  height: 80vh;
+  gap: 11px;
+  top: 65px;
+  
+}
+
+.panel {
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-start;
+  width: 11%;
+  background: center;
+  border-radius: 40px;
+  transition: width 2s ease-in-out;
+  align-items: end;
+  overflow: hidden; /* Ensures smooth effect */
+}
+
+.active {
+  width: 60%;
+}
+
+h3 {
+  font-family: cursive;
+  color: white;
+  margin-left: 20px;
+  font-size: xx-large;
+  opacity: 0; /* Hide initially */
+
+}
+
+.panel.active h3 {
+  opacity: 1; /* Fade in after delay */
+  transition: opacity 0.3s ease-in 2s;
+}
