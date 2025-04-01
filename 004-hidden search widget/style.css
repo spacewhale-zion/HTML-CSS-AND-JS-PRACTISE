@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: blueviolet;
+    height: 100vh;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+.search{
+    display: flex;
+    gap:6px
+}
+.input{
+    /* display: none; */
+    transition: width 2s ease-in;
+    font-size: x-large;
+    font-family: sans-serif;
+    border: none;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: -1;
+}
+
+.btn{
+    /* visibility: hidden; */
+    height: 50px;
+    width: 50px;
+}
+.input .active{
+    width: 200px;
+}
+button .active{
+    transform: translateX(200px);
+}
