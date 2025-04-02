@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  background-color: bisque;
+  gap: 3px;
+  overflow-x: hidden;
+  height: 200vh;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  height: 400px;
+  width: 400px;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  opacity: 0; 
+}
+
+/* Odd elements start from the left */
+.box:nth-child(odd) {
+  background-color: lightcoral;
+  transform: translateX(-1000px);
+}
+
+/* Even elements start from the right */
+.box:nth-child(even) {
+  background-color: lightblue;
+  transform: translateX(1000px);
+}
+
+/* When in viewport, apply animation */
+.box.show {
+  transform: translateX(0);
+  opacity: 1;
+}
