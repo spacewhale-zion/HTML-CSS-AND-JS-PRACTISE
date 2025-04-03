@@ -8,6 +8,5 @@ btn.addEventListener('click',()=>{
  input.classList.toggle('.active')
  btn.classList.toggle('.active')
   input.focus()
-  console.log(input)
   
 })
