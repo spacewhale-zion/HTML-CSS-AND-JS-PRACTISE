@@ -1,0 +1,25 @@
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter-container{
+
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: flex;
+      flex-direction: column;
+  
+}
