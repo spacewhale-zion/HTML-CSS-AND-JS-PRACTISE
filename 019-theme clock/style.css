@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --bg-color: #fff;
+  --clock-border: #000;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+  --bg-color: #333;
+  --clock-border: #fff;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  transition: background-color 0.3s;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.clock-container {
+  height: 45vh;
+  width: 45vh;
+  /* border: 2px solid var(--clock-border); */
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--bg-color);
+  transition: border-color 0.3s;
+}
+
+.needle {
+  width: 50%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 50%;
+  transform: rotate(90deg);
+  transition: background-color 0.3s;
+}
+
+.hour {
+  height: 4px;
+  width: 30%;
+}
+
+.minute {
+  height: 3px;
+  width: 40%;
+}
+
+.second {
+  height: 2px;
+  width: 45%;
+  background-color: red;
+}
+
+.center-point {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.time {
+  margin-top: 110%;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.date {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+
+.circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  padding: 2px 8px;
+  margin-left: 6px;
+  display: inline-block;
+  transition: all 0.3s;
+}
